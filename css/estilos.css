@@ -19,9 +19,110 @@ body {
 
 h2 {
     font-family: 'Big Shoulders Display', cursive;
+    font-weight: 700;
 }
 
 section {
     background-color: var(--color-neutral-1);
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px 20px;
+}
+
+section > div {
+    width: 100%;
+    max-width: 900px;
+    min-height: 500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card {
+    padding: 2.5rem;
+    position: relative;
+}
+
+.card__img-icon {
+    display: block;
+    margin-bottom: 30px;
+}
+
+.card__title {
+    font-size: 32px;
+    color: var(--color-neutral-2);
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+.card__description {
+    font-size: 12px;
+    color: var(--color-neutral-1);
+    line-height: 1.8;
+    letter-spacing: 1px;
+}
+
+.card__more {
+    position: absolute;
+    bottom: 2.5rem;
+    left: 2.5rem;
+    padding: 10px 1.5rem;
+    background-color: var(--color-neutral-2);
+    border-radius: 50px;
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+    border: 1px solid var(--color-neutral-2);
+    transition: background-color 0.7s;
+}
+
+
+.sedans {
+    background-color: var(--color-primary-1);
+    /* border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px; */
+}
+
+.sedans .card__more {
+    color: var(--color-primary-1);
+}
+
+.suvs {
+    background-color: var(--color-primary-2);
+}
+
+.suvs .card__more {
+    color: var(--color-primary-2);
+}
+
+.luxury {
+    background-color: var(--color-primary-3);
+    /* border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px; */
+}
+
+.luxury .card__more {
+    color: var(--color-primary-2);
+}
+
+.card__more:hover {
+    background-color: transparent;
+    color: var(--color-neutral-2);
+}
+
+@media (max-width: 768px) {
+    section > div {
+        flex-direction: column;
+        align-items: center;
+        max-width: 350px;
+    }
+
+    .card {
+        height: 500px;
+    }
 }
